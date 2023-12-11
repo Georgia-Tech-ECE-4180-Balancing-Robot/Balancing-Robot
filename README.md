@@ -18,6 +18,8 @@ List of Features
 6) Mbed
 7) LEDs
 8) Power Switch
+9) HC-SR04 Sonar Sensor
+10) Adafruit Bluefruit LE UART Friend (BLE)
 
 ## Assembly Table for Balancing Robot Project
 
