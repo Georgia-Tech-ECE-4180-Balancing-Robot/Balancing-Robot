@@ -41,8 +41,30 @@ The following components are required to build the robot:
 | Adafruit Bluefruit LE UART Friend (BLE)   | 1        | Bluetooth connectivity             | For wireless communication/control             |
 | HC-SR04 Sonar Sensor                      | 1        | Distance measurement               | Ultrasonic distance sensor                     |
 
+## Encountered Challenges
 
-List any closely related projects (URLs) and describe how your project will be different or improved.
+Throughout the development of our Balancing Robot, we faced several significant challenges:
+
+    IMU Selection: Initially, we experimented with two different Inertial Measurement Units (IMUs) that did not meet our project requirements. Finding the right IMU that provided accurate and reliable data was crucial for effective motion sensing and stability.
+
+    Servo Motor Drift: We encountered issues with servo motor drift, a common problem in precision control applications. The drift in the motors made it particularly challenging to maintain the robot's balance, necessitating careful selection and calibration of motors.
+
+    PID Tuning Process: One of the most time-consuming aspects was tuning the PID (Proportional, Integral, Derivative) controller. With over 200 iterations, we worked meticulously to find the optimal settings that allowed for stable and responsive balancing behavior.
+
+## Implemented Improvements
+
+In response to these challenges, we made several key improvements:
+
+    Optimized IMU: After testing different IMUs, we settled on the LSM9DS0 sensor, which provided the necessary accuracy and consistency for our control algorithms.
+
+    Motor Selection and Calibration: We addressed the servo motor drift issue by selecting higher-quality motors and implementing rigorous calibration procedures to minimize drift and enhance control precision.
+
+    Systematic PID Tuning: To streamline the PID tuning process, we adopted a systematic approach, adjusting one parameter at a time and methodically testing the impact of each change. This strategy, while time-consuming, was critical in achieving the desired balance and stability.
+
+These challenges have been instrumental in our learning journey and have significantly contributed to the overall success and reliability of our Balancing Robot project.
+
+
+
 https://www.youtube.com/watch?v=swEe17M_1KQ
 https://www.instructables.com/Arduino-Self-Balancing-Robot-1/
 If you need any parts or software not available in the lab or in your parts kit, what is your plan to obtain the 
