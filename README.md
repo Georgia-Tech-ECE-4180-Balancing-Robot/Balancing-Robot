@@ -41,6 +41,50 @@ The following components are required to build the robot:
 | Adafruit Bluefruit LE UART Friend (BLE)   | 1        | Bluetooth connectivity             | For wireless communication/control             |
 | HC-SR04 Sonar Sensor                      | 1        | Distance measurement               | Ultrasonic distance sensor                     |
 
+## Wiring Table
+
+## mbed to Adafruit BLE
+| mbed Pin         | Adafruit BLE Pin | Description         |
+|------------------|------------------|---------------------|
+| Gnd              | Gnd              | Ground Connection   |
+| VU (5V)          | Vin (3.3-16V)    | Power Supply        |
+| nc               | RTS              | Not connected       |
+| Gnd              | CTS              | Ground Connection   |
+| p27 (Serial RX)  | TXO              | Serial Receive      |
+| p28 (Serial TX)  | RXI              | Serial Transmit     |
+
+## Sonar Sensor
+| mbed Pin | Sonar Sensor Pin | Description        |
+|----------|------------------|--------------------|
+| Echo     | p21              | Echo Pin           |
+| Triq     | p22              | Trigger Pin        |
+| VU       | Vcc              | Power Supply       |
+| Gnd      | Gnd              | Ground Connection  |
+
+## Power Supply
+| Component        | Connection Point  | Description        |
+|------------------|-------------------|--------------------|
+| Power Supply     | mbed's Vin        | Power to mbed      |
+
+## Motors
+| mbed Pin | Motor Connection    | Description                |
+|----------|---------------------|----------------------------|
+| Motor A  | (p22, p6, p5, 1)    | pwm, fwd, rev, can brake   |
+| Motor B  | (p21, p7, p8, 1)    | pwm, fwd, rev, can brake   |
+
+## IMU Sensor
+| mbed Pin | IMU Sensor Pin | Description                     |
+|----------|----------------|---------------------------------|
+| p9       | SDA            | Serial Data Line                |
+| p10      | SCL            | Serial Clock Line               |
+| 0x6B     | Address        | Address for LSM9DS0 (Gyroscope) |
+| 0x1D     | Address        | Address for LSM9DS0 (Accelerometer) |
+
+## Notes:
+- **Connections**: Ensure that all connections are secure and correctly wired to avoid short circuits or damage to components.
+- **Power Supply**: Verify that the voltage levels are compatible with each component.
+- **Serial Communication**: The RX and TX pins are used for serial communication between the mbed and the Adafruit BLE module.
+
 ## Encountered Challenges
 
 Throughout the development of our Balancing Robot, we faced several significant challenges:
@@ -63,6 +107,16 @@ In response to these challenges, we made several key improvements:
 
 These challenges have been instrumental in our learning journey and have significantly contributed to the overall success and reliability of our Balancing Robot project.
 
+Gallery:
+Pre Sonar-Bluetooth:
+![IMG_20231209_235800](https://github.com/Georgia-Tech-ECE-4180-Balancing-Robot/Balancing-Robot/assets/79430184/a1f669c7-28f6-4aa6-9606-0dc8814a8a3d)
+
+![IMG_20231209_235854](https://github.com/Georgia-Tech-ECE-4180-Balancing-Robot/Balancing-Robot/assets/79430184/4345a120-f663-4024-b889-c4d7ef2b0b96)
+![IMG_20231209_235831](https://github.com/Georgia-Tech-ECE-4180-Balancing-Robot/Balancing-Robot/assets/79430184/37f57f1d-6207-416a-b8b2-d3291a2323ee)
+
+After:
+![20231210_005459](https://github.com/Georgia-Tech-ECE-4180-Balancing-Robot/Balancing-Robot/assets/79430184/ec486b64-8a0d-4446-ae6c-f93e0ffecba3)
+![20231210_005450](https://github.com/Georgia-Tech-ECE-4180-Balancing-Robot/Balancing-Robot/assets/79430184/e2e9f9e8-742c-430c-a5f7-6cebc4812395)
 
 
 https://www.youtube.com/watch?v=swEe17M_1KQ
