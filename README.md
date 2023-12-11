@@ -3,27 +3,27 @@ Buddy, a balancing robot for ECE 4180 Finals Project
 
 Group members: Sidhant Gulati, Muath Alsubh. Fan Han Hoon, Daniel Niemann
 
-Brief Description of Design Project:
-Our project is a balancing robot that uses an IMU to figure out its orientation and automatically corrects its
-position so that it does not fall over. We plan to use MBED multi-threading and RTOS.
-A balancing robot requires fast error calculation and a PID controller to balance it. This can run on one of 
-the threads while all other functions such as Ultrasonic sensor, LEDs, Speakers, etc.
+## Overview
+This repository contains all the necessary code, documentation, and resources for building a self-balancing robot. The robot uses an LSM9DS0 sensor for motion sensing and an mbed microcontroller for processing and control. Additional features include Bluetooth connectivity for remote control and an HC-SR04 Sonar Sensor for distance measurement.
 
-List of Features
-1) 3D printed Chassis
-2) IMU
-3) Two regular geared motors
-4) Motor Driver
-5) Battery
-6) Mbed
-7) LEDs
-8) Power Switch
-9) HC-SR04 Sonar Sensor
-10) Adafruit Bluefruit LE UART Friend (BLE)
+## Features
+- Self-balancing capabilities using gyroscope and accelerometer data.
+- Bluetooth control via Adafruit Bluefruit LE UART Friend.
+- Obstacle detection using HC-SR04 Sonar Sensor.
+- Customizable and expandable design.
 
-## Assembly Table for Balancing Robot Project
 
-Below is the list of components required for the balancing robot project, along with their quantities, purposes, and any relevant notes.
+## Brief Description of Design Project:
+The Self-Balancing Robot project is an advanced robotics initiative aimed at designing and constructing a robot that can autonomously maintain its balance in real-time. Utilizing a combination of motion-sensing technology, precision control algorithms, and mechanical engineering, this robot represents a confluence of various fields of STEM.
+
+## Design Objectives
+
+- Stability: To engineer a robot that can stand upright on two wheels, adjusting its position dynamically to counteract forces that might cause it to topple.
+- Control: Integration of a PID (Proportional, Integral, Derivative) control system to process real-time data from motion sensors and adjust motor responses accordingly.
+- Connectivity and Interaction: Implement Bluetooth technology for remote control capabilities and a sonar sensor for obstacle detection and navigation.
+
+## Components
+The following components are required to build the robot:
 
 | Part Name                                 | Quantity | Purpose                            | Notes/Remarks                                  |
 |-------------------------------------------|----------|------------------------------------|------------------------------------------------|
@@ -34,31 +34,13 @@ Below is the list of components required for the balancing robot project, along 
 | Power Supply                              | 1        | Provide power                      | Voltage and current must match system requirements |
 | Chassis                                   | 1        | Structural component               | Custom design or pre-fabricated                |
 | Wheels                                    | 2        | Locomotion                         | Match with motor shafts                        |
-| Battery                                   | 1        | Portable power source              | Ensure sufficient capacity and voltage         |
+| Battery                                   | 4        | Portable power source              | Ensure sufficient capacity and voltage         |
 | Cables/Wires                              | Varied   | Connections                        | Lengths as needed for neat wiring              |
 | Soldering Supplies                        | N/A      | For electrical connections         | Soldering iron, solder, etc.                   |
 | Screw Set                                 | Varied   | For mechanical assembly            | Assorted sizes as per design                   |
 | Adafruit Bluefruit LE UART Friend (BLE)   | 1        | Bluetooth connectivity             | For wireless communication/control             |
 | HC-SR04 Sonar Sensor                      | 1        | Distance measurement               | Ultrasonic distance sensor                     |
 
-### Additional Components and Tools
-- **Prototyping Board (Breadboard)**: For initial testing of the circuit before final soldering.
-- **Programming Tools**: USB cables, computer with necessary software and drivers.
-- **Testing Equipment**: Multimeter, oscilloscope (if necessary).
-- **Mechanical Tools**: Screwdrivers, pliers, wrench set for assembly.
-- **Safety Equipment**: Safety glasses, gloves for soldering.
-
-These components are essential for building a fully functional balancing robot capable of advanced tasks like wireless control and environmental interaction. Ensure compatibility and proper interfacing with all parts for optimal performance.
-
-
-
-List of Features if we have enough time.
-1) Ultrasonic Sensor
-2) Multiple Modes – Dancing, Explorer, 
-Tracking
-3) Bluetooth Control
-4) Speakers
-5) Line Follower
 
 List any closely related projects (URLs) and describe how your project will be different or improved.
 https://www.youtube.com/watch?v=swEe17M_1KQ
