@@ -85,7 +85,8 @@ The following components are required to build the robot:
 - **Power Supply**: Verify that the voltage levels are compatible with each component.
 - **Serial Communication**: The RX and TX pins are used for serial communication between the mbed and the Adafruit BLE module.
 
-[![ECE4180 Balancing robot demo](https://www.youtube.com/watch?v=GUrSHG2_bfE)](https://www.youtube.com/watch?v=GUrSHG2_bfE)
+# DEMO
+https://www.youtube.com/watch?v=GUrSHG2_bfE
 
 ## Encountered Challenges
 
