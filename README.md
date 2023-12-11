@@ -7,7 +7,7 @@ Brief Description of Design Project:
 Our project is a balancing robot that uses an IMU to figure out its orientation and automatically corrects its
 position so that it does not fall over. We plan to use MBED multi-threading and RTOS.
 A balancing robot requires fast error calculation and a PID controller to balance it. This can run on one of 
-the threads while all other functions such as Ultrasonic sensor, LEDs, Speakers etc.
+the threads while all other functions such as Ultrasonic sensor, LEDs, Speakers, etc.
 
 List of Features
 1) 3D printed Chassis
@@ -18,6 +18,37 @@ List of Features
 6) Mbed
 7) LEDs
 8) Power Switch
+
+## Assembly Table for Balancing Robot Project
+
+Below is the list of components required for the balancing robot project, along with their quantities, purposes, and any relevant notes.
+
+| Part Name                                 | Quantity | Purpose                            | Notes/Remarks                                  |
+|-------------------------------------------|----------|------------------------------------|------------------------------------------------|
+| LSM9DS0 Sensor                            | 1        | Motion sensing                     | Gyroscope and accelerometer                    |
+| mbed Microcontroller                      | 1        | Main control unit                  | Program with PID and filter logic              |
+| Motor (e.g., DC, stepper)                 | 2        | Movement control                   | Ensure compatible with control signals         |
+| Motor Driver (e.g., H-Bridge)             | 1        | Interface between MCU and motors   | Match with motor specifications                |
+| Power Supply                              | 1        | Provide power                      | Voltage and current must match system requirements |
+| Chassis                                   | 1        | Structural component               | Custom design or pre-fabricated                |
+| Wheels                                    | 2        | Locomotion                         | Match with motor shafts                        |
+| Battery                                   | 1        | Portable power source              | Ensure sufficient capacity and voltage         |
+| Cables/Wires                              | Varied   | Connections                        | Lengths as needed for neat wiring              |
+| Soldering Supplies                        | N/A      | For electrical connections         | Soldering iron, solder, etc.                   |
+| Screw Set                                 | Varied   | For mechanical assembly            | Assorted sizes as per design                   |
+| Adafruit Bluefruit LE UART Friend (BLE)   | 1        | Bluetooth connectivity             | For wireless communication/control             |
+| HC-SR04 Sonar Sensor                      | 1        | Distance measurement               | Ultrasonic distance sensor                     |
+
+### Additional Components and Tools
+- **Prototyping Board (Breadboard)**: For initial testing of the circuit before final soldering.
+- **Programming Tools**: USB cables, computer with necessary software and drivers.
+- **Testing Equipment**: Multimeter, oscilloscope (if necessary).
+- **Mechanical Tools**: Screwdrivers, pliers, wrench set for assembly.
+- **Safety Equipment**: Safety glasses, gloves for soldering.
+
+These components are essential for building a fully functional balancing robot capable of advanced tasks like wireless control and environmental interaction. Ensure compatibility and proper interfacing with all parts for optimal performance.
+
+
 
 List of Features if we have enough time.
 1) Ultrasonic Sensor
